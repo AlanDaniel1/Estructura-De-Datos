@@ -1,0 +1,27 @@
+using System;
+
+class ProgramaParesImpares
+{
+    static void Main()
+    {
+        int[] numeros = new int[20];
+        int pares = 0, impares = 0;
+
+        for (int i = 0; i < 20; i++)
+        {
+            Console.Write("Ingrese el número {0}: ", i + 1);
+            numeros[i] = Convert.ToInt32(Console.ReadLine());
+            if (numeros[i] % 2 == 0)
+            {
+                pares++;
+            }
+            else
+            {
+                impares++;
+            }
+        }
+
+        Console.WriteLine("\nCantidad de números pares: {0}", pares);
+        Console.WriteLine("Cantidad de números impares: {0}", impares);
+    }
+}
