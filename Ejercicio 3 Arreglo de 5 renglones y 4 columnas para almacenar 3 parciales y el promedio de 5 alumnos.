@@ -1,0 +1,33 @@
+using System;
+
+class ProgramaMatrizPromedios
+{
+    static void Main()
+    {
+        double[,] calificaciones = new double[5, 4];
+
+        for (int i = 0; i < 5; i++)
+        {
+            double suma = 0;
+            Console.WriteLine("Ingrese las calificaciones del alumno {0}:", i + 1);
+            for (int j = 0; j < 3; j++)
+            {
+                Console.Write("Calificación {0}: ", j + 1);
+                calificaciones[i, j] = Convert.ToDouble(Console.ReadLine());
+                suma += calificaciones[i, j];
+            }
+            calificaciones[i, 3] = suma / 3;
+        }
+
+        Console.WriteLine("\nCalificaciones y promedios:");
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write("Alumno {0}: ", i + 1);
+            for (int j = 0; j < 4; j++)
+            {
+                Console.Write("{0} ", calificaciones[i, j]);
+            }
+            Console.WriteLine();
+        }
+    }
+}
