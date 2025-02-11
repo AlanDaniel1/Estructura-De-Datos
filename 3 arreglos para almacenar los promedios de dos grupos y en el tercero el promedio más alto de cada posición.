@@ -1,0 +1,36 @@
+using System;
+
+class ProgramaPromediosAltos
+{
+    static void Main()
+    {
+        double[] grupo1 = new double[5];
+        double[] grupo2 = new double[5];
+        double[] promediosAltos = new double[5];
+
+        Console.WriteLine("Ingrese los promedios del Grupo 1:");
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write("Promedio {0}: ", i + 1);
+            grupo1[i] = Convert.ToDouble(Console.ReadLine());
+        }
+
+        Console.WriteLine("Ingrese los promedios del Grupo 2:");
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write("Promedio {0}: ", i + 1);
+            grupo2[i] = Convert.ToDouble(Console.ReadLine());
+        }
+
+        for (int i = 0; i < 5; i++)
+        {
+            promediosAltos[i] = Math.Max(grupo1[i], grupo2[i]);
+        }
+
+        Console.WriteLine("\nPromedios más altos:");
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Posición {0}: {1}", i + 1, promediosAltos[i]);
+        }
+    }
+}
