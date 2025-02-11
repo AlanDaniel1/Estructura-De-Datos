@@ -1,0 +1,13 @@
+using System;
+
+class ProgramaNumerosCuadradosCubos
+{
+    static void Main()
+    {
+        int[] numeros = new int[20];
+        int[] cuadrados = new int[20];
+        int[] cubos = new int[20];
+
+        for (int i = 0; i < 20; i++)
+        {
+            Console.Write("Ingrese el número
