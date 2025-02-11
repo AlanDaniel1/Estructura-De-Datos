@@ -1,0 +1,19 @@
+using System;
+
+class ProgramaSupermercado
+{
+    static void Main()
+    {
+        double[] ventas = new double[100];
+        double totalIngresos = 0;
+
+        for (int i = 0; i < 100; i++)
+        {
+            Console.Write("Ingrese el monto de la venta del cliente {0}: ", i + 1);
+            ventas[i] = Convert.ToDouble(Console.ReadLine());
+            totalIngresos += ventas[i];
+        }
+
+        Console.WriteLine("\nIngresos totales del supermercado: {0}", totalIngresos);
+    }
+}
