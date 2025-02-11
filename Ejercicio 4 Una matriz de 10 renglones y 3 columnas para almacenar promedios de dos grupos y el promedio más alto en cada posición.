@@ -1,0 +1,26 @@
+using System;
+
+class ProgramaMatrizPromediosAltos
+{
+    static void Main()
+    {
+        double[,] promedios = new double[10, 3];
+
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine("Ingrese los promedios del alumno {0} del Grupo A y B:", i + 1);
+            Console.Write("Grupo A: ");
+            promedios[i, 0] = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Grupo B: ");
+            promedios[i, 1] = Convert.ToDouble(Console.ReadLine());
+
+            promedios[i, 2] = Math.Max(promedios[i, 0], promedios[i, 1]);
+        }
+
+        Console.WriteLine("\nPromedios más altos:");
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine("Alumno {0}: {1}", i + 1, promedios[i, 2]);
+        }
+    }
+}
